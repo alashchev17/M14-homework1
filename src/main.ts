@@ -108,11 +108,9 @@ class ThreeJSScene {
   }
 
   private onWindowResize(): void {
-    // Update camera aspect ratio
     this.camera.aspect = window.innerWidth / window.innerHeight
     this.camera.updateProjectionMatrix()
 
-    // Update renderer size
     this.renderer.setSize(window.innerWidth, window.innerHeight)
   }
 
@@ -136,7 +134,6 @@ class ThreeJSScene {
   }
 
   public dispose(): void {
-    // Clean up resources
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId)
     }
@@ -151,5 +148,4 @@ class ThreeJSScene {
   }
 }
 
-// Initialize the scene
 new ThreeJSScene()
